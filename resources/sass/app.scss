@@ -9,13 +9,13 @@
 @import "bootstrap-icons/font/bootstrap-icons.css";
 
 .btn-pink {
-    background-color: pink; // Set warna latar belakang menjadi pink
-    border-color: pink; // Set warna border menjadi pink
-    color: white; // Set warna teks menjadi putih agar terlihat dengan jelas pada latar belakang pink
+    background-color: pink;
+    border-color: pink;
+    color: white;
 }
 
 .btn-pink:hover {
-    background-color: lightpink; // Efek hover: ubah warna latar belakang menjadi lightpink
-    border-color: lightpink; // Efek hover: ubah warna border menjadi lightpink
-    color: white; // Efek hover: jaga warna teks tetap putih
+    background-color: lightpink;
+    border-color: lightpink;
+    color: white;
 }

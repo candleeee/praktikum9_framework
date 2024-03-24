@@ -22,27 +22,24 @@ class EmployeeController extends Controller
     }
 
     public function store(Request $request)
-    {
-        $messages = [
-            'required' => ':Attribute harus diisi.',
-            'email' => 'Isi :attribute dengan format yang benar',
-            'numeric' => 'Isi :attribute dengan angka'
-        ];
+{
+    $messages = [
+        'required' => ':Attribute harus diisi.',
+        'email' => 'Isi :attribute dengan format yang benar',
+        'numeric' => 'Isi :attribute dengan angka'
+    ];
 
-        $validator = Validator::make($request->all(), [
-            'firstName' => 'required',
-            'lastName' => 'required',
-            'email' => 'required|email',
-            'age' => 'required|numeric',
-        ], $messages);
+    $validator = Validator::make($request->all(), [
+        'firstName' => 'required',
+        'lastName' => 'required',
+        'email' => 'required|email',
+        'age' => 'required|numeric',
+    ], $messages);
 
-        if ($validator->fails()) {
-            return redirect()->back()->withErrors($validator)->withInput();
-        }
-
-        // Proses penyimpanan data ke dalam database bisa dilakukan di sini
-
-        // Redirect ke halaman employee list
-        return redirect()->route('employees.index')->with('success', 'Employee data has been saved successfully.');
+    if ($validator->fails()) {
+        return redirect()->back()->withErrors($validator)->withInput();
     }
+
+    return redirect()->route('employees.index')->with('success', 'Employee data has been saved successfully.');
+}
 }
