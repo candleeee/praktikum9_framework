@@ -1,0 +1,21 @@
+// Fonts
+@import url('https://fonts.bunny.net/css?family=Nunito');
+
+// Variables
+@import 'variables';
+
+// Bootstrap
+@import "bootstrap/scss/bootstrap";
+@import "bootstrap-icons/font/bootstrap-icons.css";
+
+.btn-pink {
+    background-color: pink; // Set warna latar belakang menjadi pink
+    border-color: pink; // Set warna border menjadi pink
+    color: white; // Set warna teks menjadi putih agar terlihat dengan jelas pada latar belakang pink
+}
+
+.btn-pink:hover {
+    background-color: lightpink; // Efek hover: ubah warna latar belakang menjadi lightpink
+    border-color: lightpink; // Efek hover: ubah warna border menjadi lightpink
+    color: white; // Efek hover: jaga warna teks tetap putih
+}
