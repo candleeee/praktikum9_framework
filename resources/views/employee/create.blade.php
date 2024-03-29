@@ -81,6 +81,18 @@
                                 <div>{{ $message }}</div>
                             @enderror
                         </div>
+                        <div class="col-md-12 mb-3">
+                            <label for="position" class="form-label">Position</label>
+                            <select name="position" id="position" class="form-select">
+                                @foreach ($positions as $position)
+                                    <option value="{{ $position->id }}" {{ old('position') == $position->id ? 'selected' : '' }}>{{ $position->code.' - '.$position->name }}</option>
+                                @endforeach
+                            </select>
+                            @error('position')
+                                <div class="text-danger"><small>{{ $message }}</small></div>
+                            @enderror
+                        </div>
+
                     </div>
                     <hr>
                     <div class="row">
