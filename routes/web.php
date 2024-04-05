@@ -19,5 +19,4 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('employees/{id}/edit', 'EmployeeController@edit')->name('employees.edit');
 
