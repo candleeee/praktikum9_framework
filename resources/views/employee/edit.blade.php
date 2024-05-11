@@ -2,8 +2,7 @@
 
 @section('content')
     <div class="container-sm my-5">
-        <form action="{{ route('employees.update', ['employee' => $employee->id]) }}" method="POST">
-            @csrf
+        <form action="{{ route('employees.update', ['employee' => $employee->id]) }}" method="POST" enctype="multipart/form-data">            @csrf
             @method('put')
             <div class="row justify-content-center">
                 <div class="p-5 bg-light rounded-3 col-xl-6">
@@ -70,6 +69,10 @@
                             @error('position')
                                 <div class="text-danger"><small>{{ $message }}</small></div>
                             @enderror
+                            <div class="col-md-12 mb-3">
+                                <label for="cv" class="form-label">Curriculum Vitae (CV)</label>
+                                <input type="file" class="form-control" name="cv" id="cv">
+                            </div>
                         </div>
                     </div>
                     <hr>
